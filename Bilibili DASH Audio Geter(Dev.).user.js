@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bilibili DASH Audio Geter(Dev.)
-// @namespace    http://tampermonkey.net/
+// @namespace https://greasyfork.org/zh-CN/scripts/375420-bilibili-dash-audio-geter
 // @version      0.1
 // @description  get dash audio on Bilibili!
 // @author       qjzcj2008
@@ -43,4 +43,5 @@
     //test1.data.dash.audio[0].baseUrl
     //van-icon-videodetails_play
     //van-icon-floatwindow_custome
+	//sign_url need Referer:play_page
 })();
