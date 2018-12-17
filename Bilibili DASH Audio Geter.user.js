@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bilibili DASH Audio Geter
-// @namespace    Bilibili DASH Audio Geter
+// @namespace https://greasyfork.org/zh-CN/scripts/375420-bilibili-dash-audio-geter
 // @version      0.1
 // @description  get dash audio on Bilibili!
 // @author       qjzcj2008
