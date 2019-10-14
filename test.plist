@@ -33,13 +33,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.xxxx.demo</string>
+				<string>abema</string>
 				<key>bundle-version</key>
-				<string>1.0.0</string>
+				<string>3.2.1</string>
 				<key>kind</key>
 				<string>software</string>
-				<key>AbemaTV アベマティーヴィー</key>
-				<string>AbemaTV アベマティーヴィー</string>
+				<key>AbemaTV</key>
+				<string>AbemaTV</string>
 			</dict>
 		</dict>
 	</array>
