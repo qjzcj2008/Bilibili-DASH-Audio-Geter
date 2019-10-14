@@ -33,7 +33,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>abema</string>
+				<string>tv.abema.AbemaTV</string>
 				<key>bundle-version</key>
 				<string>3.2.1</string>
 				<key>kind</key>
