@@ -1,18 +1,23 @@
 // ==UserScript==
 // @name         Bilibili DASH Audio Geter(Dev.)
 // @namespace https://greasyfork.org/zh-CN/scripts/375420-bilibili-dash-audio-geter
-// @version      0.1
+// @version      0.2
 // @description  get dash audio on Bilibili!
 // @author       qjzcj2008
 // @include      *://www.bilibili.com/video/av*
+// @include      *://www.bilibili.com/video/bv*
 // @grant        none
 // ==/UserScript==
+
 
 (function() {
     'use strict';
 
     // Your code here...
     setTimeout(function() {
+    var info = window.playerInfo
+    var aid = info.aid
+    var Scheme = "biilibili://video/" + aid
     var page = document.getElementsByTagName('html')[0].innerHTML;
     var info_rule = "<script>window\.__playinfo__=.*}</script>";
     var playinfo = page.match(info_rule)[0];
@@ -21,20 +26,25 @@
     var playurl = playinfo.match(json_rule)["0"];
     var jsondata = JSON.parse(playurl);
     var dashaudio = jsondata.data.dash.audio[0].baseUrl;
-    var audio_rule = "http[\\S]*m4s";
-    var audio_url = dashaudio.match(audio_rule)["0"];
-    console.log(audio_url);
-    alert(audio_url);
+    //var audio_rule = "http[\\S]*m4s";
+    //var audio_url = dashaudio.match(audio_rule)["0"];
+    //console.log(dashaudio);
+    //alert(Scheme);
     //doc = win.document;
     var url = window.location.href;
     var loc;
     var URI="";
     var element,element2,para,childpara,node;
-   element = document.getElementsByClassName("a-crumbs")[0];
+   element = document.getElementsByClassName("video-data")[0];
 			para = document.createElement("a");
-            para.innerText = " 获取音频";
+            para.innerText = " · 获取音频";
 			para.setAttribute("class","charge-appeal-init");
-			para.href = audio_url;
+			para.href = dashaudio;
+            element.appendChild(para);
+            para = document.createElement("a");
+            para.innerText = " · 打开客户端";
+			para.setAttribute("target","_blank");
+			para.href = Scheme;
             element.appendChild(para);
     }, 5000);
     //(?<=\{).*(?=\})
